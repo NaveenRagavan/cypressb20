@@ -1,10 +1,11 @@
+import data from "../../../fixtures/logindata.json"
 describe('Login with Credendials', () => {
   it.only('login with valid username and password', () =>{
   cy.login("Admin","admin123")
   })
   it('login with valid username and invalidpassword', () =>{
     cy.visit('/web/index.php/auth/login')
-    cy.get('input[name="username"]').type('Admin')
+    cy.get('input[name="username"]').type('data.username')
     cy.get('input[type="password"]').type('admin123455589')
     cy.get('button[type="submit"]').click()
     cy.contains('Invalid credentials').should('be.visible')

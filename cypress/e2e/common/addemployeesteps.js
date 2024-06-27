@@ -3,10 +3,10 @@ And('user clicks on PIM',()=>{
     cy.contains('PIM').click()
 })
 And('user clicks on addemployee submenu',()=>{
-    cy.contains('Add Employee').click()
+    cy.contains('Add Employee') .click()
 })
 And('user enter the firstname {string} and lastname {string}',(firstname,lastname)=>{
-    cy.get('input[name="firstName"]').type(firstname)
+    cy.get ('input[name="firstName"]').type(firstname)
     cy.get('input[name="lastName"]').type(lastname)
 })
 And('user clicks on save button',()=>{

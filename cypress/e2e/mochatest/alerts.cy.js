@@ -8,7 +8,7 @@ describe("Automate the alerts",()=>{
             expect(alert).to.equal('I am an alert box!')
         })
     })
-    it('Confirm Alert click ok',()=>{
+    it('Confirm Alert click ok', ()=>{
        cy.get('#confirmexample').click()
         cy.on('window:confirm',()=>{
             return true

@@ -9,7 +9,7 @@ When('user enter the username {string} and password {string}', (username,passwor
 And('user clicks on the login button',()=>{
     cy.get('button[type="submit"]').click()
 })
-Then('user should be navigate to dashboard page',()=>{
+Then('user should be navigate to dashboard page', ()=>{
     cy.contains('Dashboard').should('be.visible')
 })
 Then('user should get login error',()=>{
